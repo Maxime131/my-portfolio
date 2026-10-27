@@ -1,0 +1,124 @@
+<svg width="600" height="500" viewBox="0 0 600 500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Effortless Leasing">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ecfeff"/>
+      <stop offset="100%" stop-color="#f0fdf4"/>
+    </linearGradient>
+    <linearGradient id="brand" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#10b981"/>
+      <stop offset="100%" stop-color="#0ea5a4"/>
+    </linearGradient>
+    <linearGradient id="blue" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#60a5fa"/>
+      <stop offset="100%" stop-color="#2563eb"/>
+    </linearGradient>
+    <linearGradient id="amber" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fcd34d"/>
+      <stop offset="100%" stop-color="#f59e0b"/>
+    </linearGradient>
+    <filter id="shadow">
+      <feDropShadow dx="0" dy="10" stdDeviation="12" flood-opacity="0.16"/>
+    </filter>
+    <filter id="soft">
+      <feDropShadow dx="0" dy="3" stdDeviation="5" flood-opacity="0.1"/>
+    </filter>
+  </defs>
+
+  <style>
+    @keyframes float { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-6px)} }
+    @keyframes pulse { 0%,100%{opacity:.95} 50%{opacity:.45} }
+    @keyframes dash { from{stroke-dashoffset:20} to{stroke-dashoffset:0} }
+    .float { animation: float 3s ease-in-out infinite; }
+    .pulse { animation: pulse 2s ease-in-out infinite; }
+    .dash { animation: dash 1s linear infinite; }
+  </style>
+
+  <rect width="600" height="500" fill="url(#bg)"/>
+  <circle cx="86" cy="84" r="70" fill="#14b8a6" opacity="0.08"/>
+  <circle cx="520" cy="96" r="66" fill="#38bdf8" opacity="0.08"/>
+  <circle cx="540" cy="418" r="88" fill="#22c55e" opacity="0.08"/>
+
+  <text x="36" y="52" font-family="Arial, sans-serif" font-size="30" font-weight="700" fill="#065f46">Effortless Leasing</text>
+  <text x="36" y="76" font-family="Arial, sans-serif" font-size="12" fill="#64748b">Sample lease info card with automation-ready actions.</text>
+
+  <g filter="url(#soft)">
+    <rect x="36" y="108" width="176" height="294" rx="20" fill="#ffffff" stroke="#dbeafe"/>
+  </g>
+  <text x="54" y="138" font-family="Arial, sans-serif" font-size="12" font-weight="700" fill="#0f766e">Workflow</text>
+
+  <g filter="url(#soft)">
+    <rect x="52" y="154" width="144" height="58" rx="12" fill="#f8fafc" stroke="#dbeafe"/>
+    <rect x="52" y="224" width="144" height="58" rx="12" fill="#f8fafc" stroke="#dbeafe"/>
+    <rect x="52" y="294" width="144" height="58" rx="12" fill="#f8fafc" stroke="#dbeafe"/>
+  </g>
+
+  <circle cx="72" cy="183" r="11" fill="url(#brand)"/>
+  <path d="M67 183 L71 187 L78 179" stroke="#ffffff" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="88" y="179" font-family="Arial, sans-serif" font-size="10" font-weight="700" fill="#0f172a">Create</text>
+  <text x="88" y="193" font-family="Arial, sans-serif" font-size="8.5" fill="#64748b">Template + terms</text>
+
+  <circle cx="72" cy="253" r="11" fill="url(#blue)"/>
+  <path d="M65 253 Q72 245 79 253 Q72 261 65 253 Z" fill="#ffffff"/>
+  <text x="88" y="249" font-family="Arial, sans-serif" font-size="10" font-weight="700" fill="#0f172a">Renew</text>
+  <text x="88" y="263" font-family="Arial, sans-serif" font-size="8.5" fill="#64748b">Deadline alerts</text>
+
+  <circle cx="72" cy="323" r="11" fill="url(#amber)"/>
+  <path d="M67 323 L77 323" stroke="#ffffff" stroke-width="2.2" stroke-linecap="round"/>
+  <text x="88" y="319" font-family="Arial, sans-serif" font-size="10" font-weight="700" fill="#0f172a">Close</text>
+  <text x="88" y="333" font-family="Arial, sans-serif" font-size="8.5" fill="#64748b">Move-out tasks</text>
+
+  <g stroke="#10b981" stroke-width="2" fill="none" stroke-dasharray="5 5" class="dash" opacity="0.45">
+    <path d="M196 183 L242 183"/>
+    <path d="M196 253 L242 253"/>
+    <path d="M196 323 L242 323"/>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="238" y="108" width="328" height="294" rx="22" fill="#ffffff" stroke="#dbeafe"/>
+    <rect x="238" y="108" width="328" height="58" rx="22" fill="url(#brand)"/>
+    <text x="258" y="141" font-family="Arial, sans-serif" font-size="13" font-weight="700" fill="#ffffff">Sample Lease Info</text>
+    <text x="548" y="141" font-family="Arial, sans-serif" font-size="10" fill="#dcfce7" text-anchor="end">#LS-2026-104</text>
+  </g>
+
+  <g filter="url(#soft)">
+    <rect x="256" y="182" width="292" height="94" rx="14" fill="#f8fafc" stroke="#dbeafe"/>
+    <rect x="256" y="286" width="292" height="54" rx="14" fill="#f8fafc" stroke="#dbeafe"/>
+  </g>
+
+  <text x="272" y="206" font-family="Arial, sans-serif" font-size="9" fill="#64748b">Tenant</text>
+  <text x="272" y="220" font-family="Arial, sans-serif" font-size="11" font-weight="700" fill="#0f172a">John Anderson</text>
+  <text x="420" y="206" font-family="Arial, sans-serif" font-size="9" fill="#64748b">Unit</text>
+  <text x="420" y="220" font-family="Arial, sans-serif" font-size="11" font-weight="700" fill="#0f172a">A-304</text>
+
+  <text x="272" y="240" font-family="Arial, sans-serif" font-size="9" fill="#64748b">Lease Term</text>
+  <text x="272" y="254" font-family="Arial, sans-serif" font-size="11" font-weight="700" fill="#0f172a">Jan 01, 2026 - Dec 31, 2026</text>
+  <text x="420" y="240" font-family="Arial, sans-serif" font-size="9" fill="#64748b">Status</text>
+  <rect x="420" y="245" width="96" height="20" rx="10" fill="#dcfce7"/>
+  <circle cx="432" cy="255" r="4" fill="#10b981" class="pulse"/>
+  <text x="470" y="259" font-family="Arial, sans-serif" font-size="9" font-weight="700" fill="#065f46" text-anchor="middle">Active</text>
+
+  <text x="272" y="308" font-family="Arial, sans-serif" font-size="9" fill="#64748b">Monthly Rent</text>
+  <text x="272" y="326" font-family="Georgia, serif" font-size="20" font-weight="700" fill="#0f172a">$1,500</text>
+  <text x="420" y="308" font-family="Arial, sans-serif" font-size="9" fill="#64748b">Deposit</text>
+  <text x="420" y="326" font-family="Arial, sans-serif" font-size="13" font-weight="700" fill="#0f172a">$1,500</text>
+
+  <g filter="url(#soft)">
+    <rect x="256" y="350" width="140" height="36" rx="10" fill="#ffffff" stroke="#cce9dd"/>
+    <rect x="408" y="350" width="140" height="36" rx="10" fill="#ffffff" stroke="#fee2e2"/>
+  </g>
+  <text x="326" y="372" font-family="Arial, sans-serif" font-size="10" font-weight="700" fill="#059669" text-anchor="middle">Renew Lease</text>
+  <text x="478" y="372" font-family="Arial, sans-serif" font-size="10" font-weight="700" fill="#dc2626" text-anchor="middle">Terminate</text>
+
+  <g class="float" style="animation-delay:.5s" filter="url(#soft)">
+    <rect x="438" y="84" width="130" height="46" rx="12" fill="#ffffff"/>
+    <circle cx="454" cy="107" r="8" fill="#10b981" class="pulse"/>
+    <text x="468" y="104" font-family="Arial, sans-serif" font-size="9" font-weight="700" fill="#065f46">Reminder On</text>
+    <text x="468" y="117" font-family="Arial, sans-serif" font-size="8" fill="#64748b">Next renewal: 30 days</text>
+  </g>
+
+  <g class="float" style="animation-delay:1s" filter="url(#soft)">
+    <rect x="236" y="420" width="156" height="42" rx="12" fill="#ffffff"/>
+    <text x="314" y="437" font-family="Arial, sans-serif" font-size="9" fill="#64748b" text-anchor="middle">Policy Template</text>
+    <text x="314" y="451" font-family="Arial, sans-serif" font-size="10" font-weight="700" fill="#1e40af" text-anchor="middle">Standard Residential A</text>
+  </g>
+</svg>
