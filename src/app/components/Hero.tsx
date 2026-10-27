@@ -13,7 +13,7 @@ const headline = [
 ];
 
 const intro =
-  'I craft exceptional digital experiences through elegant code and thoughtful design. Specializing in React, TypeScript, and modern web technologies.';
+  'I design and build end-to-end digital products, from UI/UX and frontend to scalable backends, APIs and IoT/GPS integrations. Specializing in React, TypeScript and Node.js.';
 
 export function Hero() {
   const scrollToSection = (id: string) => {

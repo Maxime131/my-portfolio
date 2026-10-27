@@ -1,87 +1,44 @@
 import { motion } from 'motion/react';
 import { revealProps } from './reveal';
-import { Code, Database, GitBranch, Layers, Server, Smartphone } from 'lucide-react';
+import { Cloud, Code, Monitor, Palette, Server } from 'lucide-react';
+
+const coreStack = ['React', 'TypeScript', 'Node.js', 'PostgreSQL', 'Tailwind CSS', 'Figma'];
+
+const expertise = [
+  {
+    title: 'Product Design (UI/UX)',
+    icon: Palette,
+    summary: 'User-centred interfaces and design systems, taken from research to polished, shippable UI.',
+    skills: ['Figma', 'Design Systems', 'Wireframing & Prototyping', 'Responsive UI', 'Dashboard UX', 'Accessibility'],
+  },
+  {
+    title: 'Frontend Engineering',
+    icon: Monitor,
+    summary: 'Fast, accessible and maintainable interfaces built with a modern component-driven stack.',
+    skills: ['React', 'TypeScript', 'JavaScript (ES6+)', 'Tailwind CSS', 'HTML5 & CSS3', 'Motion & Animation'],
+  },
+  {
+    title: 'Backend & APIs',
+    icon: Server,
+    summary: 'Secure, well-structured services and APIs that power real business workflows.',
+    skills: ['Node.js', 'Express', 'REST APIs', 'GraphQL', 'Authentication & Roles', 'SMS / USSD / WhatsApp Integrations'],
+  },
+  {
+    title: 'Data, Cloud & Delivery',
+    icon: Cloud,
+    summary: 'Reliable data layers and deployment workflows for production systems.',
+    skills: ['PostgreSQL', 'MongoDB', 'Firebase', 'Docker', 'AWS', 'Git & GitHub'],
+  },
+];
 
 export function Skills() {
-  const skillCategories = [
-    {
-      category: 'Frontend',
-      icon: Smartphone,
-      color: 'cyan',
-      skills: [
-        { name: 'HTML5', level: 95 },
-        { name: 'CSS3', level: 92 },
-        { name: 'JavaScript', level: 90 },
-        { name: 'React', level: 88 },
-        { name: 'TypeScript', level: 85 },
-        { name: 'Tailwind CSS', level: 90 },
-      ],
-    },
-    {
-      category: 'Backend',
-      icon: Server,
-      color: 'blue',
-      skills: [
-        { name: 'Node.js', level: 85 },
-        { name: 'Express', level: 82 },
-        { name: 'REST APIs', level: 88 },
-        { name: 'GraphQL', level: 75 },
-      ],
-    },
-    {
-      category: 'Database',
-      icon: Database,
-      color: 'purple',
-      skills: [
-        { name: 'MongoDB', level: 85 },
-        { name: 'PostgreSQL', level: 80 },
-        { name: 'Firebase', level: 78 },
-      ],
-    },
-    {
-      category: 'Tools & Others',
-      icon: GitBranch,
-      color: 'cyan',
-      skills: [
-        { name: 'Git & GitHub', level: 90 },
-        { name: 'VS Code', level: 95 },
-        { name: 'Docker', level: 70 },
-        { name: 'AWS', level: 72 },
-      ],
-    },
-  ];
-
-  const getColorClasses = (color: string) => {
-    const colors: Record<string, { bg: string; border: string; text: string; glow: string }> = {
-      cyan: {
-        bg: 'from-cyan-500 to-cyan-600',
-        border: 'border-cyan-500/20',
-        text: 'text-cyan-400',
-        glow: 'shadow-cyan-500/20',
-      },
-      blue: {
-        bg: 'from-blue-500 to-blue-600',
-        border: 'border-blue-500/20',
-        text: 'text-blue-400',
-        glow: 'shadow-blue-500/20',
-      },
-      purple: {
-        bg: 'from-purple-500 to-purple-600',
-        border: 'border-purple-500/20',
-        text: 'text-purple-400',
-        glow: 'shadow-purple-500/20',
-      },
-    };
-    return colors[color];
-  };
-
   return (
     <motion.section {...revealProps} id="skills" className="py-24 px-6 bg-gray-900/30 relative overflow-hidden">
       {/* Background decoration */}
       <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-blue-600/5 rounded-full blur-3xl" />
-      
+
       <div className="max-w-7xl mx-auto relative z-10">
-        <div className="text-center mb-16">
+        <div className="text-center mb-12">
           <span className="text-cyan-400 font-semibold uppercase tracking-wider text-sm">
             Skills & Expertise
           </span>
@@ -92,40 +49,48 @@ export function Skills() {
             </span>
           </h2>
           <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-            Proficient in modern web technologies and frameworks, constantly expanding my skill set.
+            End-to-end product capability, from UI/UX design to production-grade frontend, backend and cloud delivery.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {skillCategories.map((category, categoryIndex) => {
-            const colors = getColorClasses(category.color);
-            return (
-              <div key={categoryIndex}>
-                <div className="flex items-center gap-4 mb-6">
-                  <div className="h-px flex-1 bg-gradient-to-r from-transparent to-gray-700" />
-                  <h3 className={`text-lg font-medium ${colors.text}`}>
-                    {category.category}
-                  </h3>
-                  <div className="h-px flex-1 bg-gradient-to-l from-transparent to-gray-700" />
-                </div>
+        {/* Core stack */}
+        <div className="flex flex-wrap items-center justify-center gap-3 mb-14">
+          <span className="text-sm uppercase tracking-wider text-gray-500 mr-2">Core stack</span>
+          {coreStack.map((tech) => (
+            <span
+              key={tech}
+              className="px-4 py-2 rounded-full text-sm font-medium text-cyan-300 bg-cyan-500/10 border border-cyan-500/30 hover:bg-cyan-500/20 transition-colors"
+            >
+              {tech}
+            </span>
+          ))}
+        </div>
 
-                <div className="space-y-4">
-                  {category.skills.map((skill, skillIndex) => (
-                    <div
-                      key={skillIndex}
-                      className={`group flex items-center gap-3 px-4 py-4 bg-gradient-to-br from-gray-900/80 to-gray-800/60 border border-gray-800 rounded-xl hover:border-cyan-500/40 hover:-translate-y-0.5 hover:shadow-lg ${colors.glow} transition-all duration-300`}
-                    >
-                      <category.icon className={colors.text} size={20} />
-                      <div className="min-w-0">
-                        <div className="text-gray-100 truncate">{skill.name}</div>
-                        <div className={`${colors.text} text-xs`}>{skill.level}%</div>
-                      </div>
-                    </div>
-                  ))}
+        <div className="grid md:grid-cols-2 gap-6">
+          {expertise.map((area) => (
+            <div
+              key={area.title}
+              className="group p-7 bg-gradient-to-br from-gray-900/80 to-gray-800/60 border border-gray-800 rounded-2xl hover:border-cyan-500/40 hover:-translate-y-1 hover:shadow-xl hover:shadow-cyan-500/10 transition-all duration-300"
+            >
+              <div className="flex items-center gap-4 mb-4">
+                <div className="w-12 h-12 flex items-center justify-center rounded-xl bg-gradient-to-br from-cyan-500 to-blue-600 text-white shadow-lg shadow-cyan-500/20">
+                  <area.icon size={24} />
                 </div>
+                <h3 className="text-xl font-semibold text-gray-100">{area.title}</h3>
               </div>
-            );
-          })}
+              <p className="text-gray-400 mb-5 leading-relaxed">{area.summary}</p>
+              <div className="flex flex-wrap gap-2">
+                {area.skills.map((skill) => (
+                  <span
+                    key={skill}
+                    className="px-3 py-1 text-sm text-gray-300 bg-gray-800/80 border border-gray-700 rounded-lg group-hover:border-cyan-500/30 transition-colors"
+                  >
+                    {skill}
+                  </span>
+                ))}
+              </div>
+            </div>
+          ))}
         </div>
 
         {/* Tech Icons Grid */}
