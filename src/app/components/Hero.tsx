@@ -1,3 +1,4 @@
+import { WhatsAppIcon } from './WhatsAppIcon';
 import { ArrowRight, Dribbble, Linkedin, Mail, MapPin } from 'lucide-react';
 import { motion } from 'motion/react';
 import { ImageWithFallback } from './figma/ImageWithFallback';
@@ -124,6 +125,15 @@ export function Hero() {
                   className="p-3 bg-gray-800 border border-gray-700 rounded-lg text-gray-400 hover:text-cyan-400 hover:border-cyan-500/50 hover:bg-gray-700 transition-all duration-300"
                 >
                   <Linkedin size={20} />
+                </a>
+                <a
+                  aria-label="WhatsApp"
+                  href="https://wa.me/250781506684"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="p-3 bg-gray-800 border border-gray-700 rounded-lg text-gray-400 hover:text-cyan-400 hover:border-cyan-500/50 hover:bg-gray-700 transition-all duration-300"
+                >
+                  <WhatsAppIcon size={20} />
                 </a>
               </div>
             </div>
