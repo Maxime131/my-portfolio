@@ -6,7 +6,7 @@ import { ImageWithFallback } from './figma/ImageWithFallback';
 const EASE: [number, number, number, number] = [0.22, 1, 0.36, 1];
 
 const headline = [
-  { text: 'Full-Stack', color: 'text-cyan-400' },
+  { text: 'Software', color: 'text-cyan-400' },
   { text: 'Developer', color: 'text-sky-400' },
   { text: '&', color: 'text-blue-500' },
   { text: 'Product', color: 'text-indigo-400' },
@@ -57,7 +57,7 @@ export function Hero() {
                 </span>
               </div>
               
-              <h1 className="text-4xl lg:text-6xl font-bold leading-[1.1] tracking-tight" aria-label="Full-Stack Developer & Product Builder">
+              <h1 className="text-4xl lg:text-6xl font-bold leading-[1.1] tracking-tight" aria-label="Software Developer & Product Builder">
                 {headline.map((w, i) => (
                   <motion.span
                     key={i}
